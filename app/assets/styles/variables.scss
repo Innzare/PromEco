@@ -1,0 +1,43 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #202020;
+  --color-black-50: #191919;
+  --color-black-100: #0c0c0c;
+  --color-black-200: #020001;
+  --color-black-600: #000000;
+
+  --color-gray-50: #f3f4f5;
+  --color-gray-100: #eaedf0;
+  --color-gray-200: #e7e6e6;
+  --color-gray-300: #d2d5d8;
+  --color-gray-400: #868686;
+  --color-gray-500: #323232;
+
+  --color-red: #cb2829;
+  --color-red-100: #a62121;
+
+  --button-lg-height: 64px;
+  --button-md-height: 56px;
+  --button-sm-height: 44px;
+
+  --button-lg-size: 18px;
+  --button-md-size: 16px;
+  --button-sm-size: 14px;
+
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+  --radius-xs: 4px;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  --slide-count: 5;
+  --slide-height: 150px;
+  --slide-width: 320px;
+  --slide-gap: 10px;
+  --slide-time: 20s;
+}
