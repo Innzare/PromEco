@@ -124,13 +124,15 @@ const onSubmit = async (values) => {
 
           <ErrorMessage name="terms" class="text-xs text-red-700" />
 
-          <Button :disabled="isLoading" type="submit" class="mt-0" size="small" :block="isTablet">
-            <div class="flex items-center gap-2">
-              <span>Отправить</span>
+          <ClientOnly>
+            <Button :disabled="isLoading" type="submit" class="mt-0" size="small" :block="isTablet">
+              <div class="flex items-center gap-2">
+                <span>Отправить</span>
 
-              <Icon name="i-lucide-arrow-right" />
-            </div>
-          </Button>
+                <Icon name="i-lucide-arrow-right" />
+              </div>
+            </Button>
+          </ClientOnly>
         </Form>
       </div>
     </section>
