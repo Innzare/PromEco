@@ -15,7 +15,7 @@ const onNavMenuBtnClick = () => {
     <div class="container">
       <div class="header">
         <NuxtLink to="/">
-          <img src="~/assets/img/logo.webp" alt="logo" />
+          <img src="~/assets/img/logo.webp" alt="logo" class="w-[150px] md:w-[200px]" />
         </NuxtLink>
 
         <nav>

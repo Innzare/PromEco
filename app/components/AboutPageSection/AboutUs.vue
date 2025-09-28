@@ -14,12 +14,12 @@ import { motion } from 'motion-v';
             :whileInView="{ opacity: 1, x: 0 }"
             :transition="{ duration: 1, ease: 'easeOut' }"
             :inViewOptions="{ once: true, amount: 0.3 }"
-            class="text-3xl md:text-5xl flex-1 text-left mb-6 md:mb-0"
+            class="text-3xl md:text-5xl flex-1 mb-6 md:mb-0"
           >
             О нас
           </motion.h2>
 
-          <div class="text-stone-500 flex-1 text-left">
+          <div class="text-stone-500 flex-1">
             <motion.p
               :initial="{ opacity: 0, x: -50 }"
               :whileInView="{ opacity: 1, x: 0 }"

@@ -82,9 +82,9 @@ const SLIDES = [
       background: `linear-gradient(0deg, #0c0c0cd8, #0c0c0ccc), center / cover no-repeat url(${SLIDES[activeIndex].img})`
     }"
   >
-    <h2 class="text-2xl md:text-5xl mb-4">Продукция ПромЭко</h2>
+    <h2 class="text-center text-2xl md:text-5xl mb-4">Продукция ПромЭко</h2>
 
-    <p class="text-stone-400 text-base md:text-xl mb-10 md:mb-20">
+    <p class="text-center text-stone-400 text-base md:text-xl mb-10 md:mb-20">
       Компания предлагает широкий ассортимент продукции, охватывающий ключевые направления отрасли
     </p>
 
@@ -114,7 +114,7 @@ const SLIDES = [
         </swiper>
       </ClientOnly>
 
-      <p class="text-2xl md:text-3xl font-bold tracking-wide text-red-700 mt-5 md:mt-10">
+      <p class="text-2xl md:text-3xl text-center font-bold tracking-wide text-sky-700 mt-5 md:mt-10">
         {{ SLIDES[activeIndex].text }}
       </p>
 

@@ -70,9 +70,9 @@ const ACHIEVEMENTS = [
   <section class="advantages-wrapper">
     <div class="container">
       <div class="advantages">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-20 text-left">Наши преимущества</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-5 md:mb-20">Наши преимущества</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
             v-for="(item, index) in ADVANTAGES"
             :key="index"
@@ -86,7 +86,7 @@ const ACHIEVEMENTS = [
             ]"
           >
             <template v-if="!item.img">
-              <Icon v-if="item.icon" :name="item?.icon" class="text-red-700 mb-4" size="32px" />
+              <Icon v-if="item.icon" :name="item?.icon" class="text-sky-700 mb-4" size="32px" />
 
               <p class="text-xl md:text-2xl mb-4">
                 {{ item.title }}
@@ -102,7 +102,7 @@ const ACHIEVEMENTS = [
     </div>
 
     <div class="container">
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 my-10 md:my-20 text-left">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 my-10 md:my-20">
         <motion.div
           v-for="(item, index) in ACHIEVEMENTS"
           :key="index"
@@ -113,7 +113,7 @@ const ACHIEVEMENTS = [
           class="p-4 md:p-8 bg-neutral-900 rounded-2xl border border-stone-800"
         >
           <div class="drop-shadow-red-700">
-            <Icon :name="item.icon" class="text-red-700 mb-4" size="32px" />
+            <Icon :name="item.icon" class="text-sky-700 mb-4" size="32px" />
           </div>
 
           <h3 class="text-2xl md:text-3xl mb-2">{{ item.title }}</h3>
@@ -138,7 +138,7 @@ const ACHIEVEMENTS = [
     border-radius: 16px;
 
     @media (max-width: 768px) {
-      padding: 60px 0;
+      padding: 40px 0 10px;
       border: 0;
     }
   }

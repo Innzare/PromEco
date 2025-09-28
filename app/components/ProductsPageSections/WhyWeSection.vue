@@ -26,7 +26,7 @@ const LIST = [
 <template>
   <section class="bg-black-200 py-10 sm:py-20">
     <div class="container">
-      <h2 class="text-3xl text-left">Почему выбирают продукцию ПромЭко</h2>
+      <h2 class="text-3xl">Почему выбирают продукцию ПромЭко</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mt-10">
         <div
@@ -34,7 +34,7 @@ const LIST = [
           :key="index"
           class="flex flex-col gap-6 items-center bg-black-100 p-4 sm:p-8 rounded-lg hover:shadow-lg transition-shadow border border-gray-700"
         >
-          <Icon :name="item.icon" size="40px" class="text-red-700" />
+          <Icon :name="item.icon" size="40px" class="text-sky-700" />
           <h3 class="text-xl mb-2">{{ item.title }}</h3>
           <p class="text-stone-500">{{ item.text }}</p>
         </div>

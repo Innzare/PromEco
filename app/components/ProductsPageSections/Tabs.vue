@@ -61,9 +61,9 @@ const setActiveTab = (id) => {
             v-for="tab in TABS"
             :key="tab.id"
             @click="setActiveTab(tab.id)"
-            :class="`flex items-center justify-between text-left cursor-pointer px-6 py-4 rounded-lg bg-black-100 ${
-              activeTab === tab.id ? 'bg-red-700' : ''
-            } hover:bg-red-700 transition-all`"
+            :class="`flex items-center justify-between   cursor-pointer px-6 py-4 rounded-lg bg-black-100 ${
+              activeTab === tab.id ? 'bg-sky-700' : ''
+            } hover:bg-sky-700 transition-all`"
           >
             {{ tab.title }}
 
@@ -85,7 +85,7 @@ const setActiveTab = (id) => {
       </div>
     </div>
 
-    <div class="sm:hidden flex flex-col gap-5 text-left mt-10">
+    <div class="sm:hidden flex flex-col gap-5 mt-10">
       <div class="p-4 sm:p-6 bg-black-200 rounded-2xl" v-for="(item, index) in TABS" :key="index">
         <img :src="item.img" alt="Product image" class="mb-6 rounded-lg" />
 

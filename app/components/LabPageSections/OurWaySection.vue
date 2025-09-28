@@ -18,9 +18,9 @@ const ITEMS = [
 ];
 </script>
 <template>
-  <div class="py-20 md:py-[160px]">
+  <div class="py-10 md:py-[160px]">
     <div class="container">
-      <div class="text-left mb-5 md:mb-10">
+      <div class="mb-6 md:mb-10">
         <h2 class="text-2xl md:text-5xl mb-4">Научный подход — в основе каждого продукта</h2>
 
         <p class="text-stone-500">
@@ -28,13 +28,13 @@ const ITEMS = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
         <div
-          class="p-6 rounded-lg flex flex-col gap-4 bg-black-200 text-left border border-black-100"
+          class="p-6 rounded-lg flex flex-col gap-4 bg-black-200 border border-black-100"
           v-for="(item, index) in ITEMS"
           :key="index"
         >
-          <DigitIcon :type="item.icon" size="lg" class="text-red-700" />
+          <DigitIcon :type="item.icon" size="lg" class="text-sky-700" />
           <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
           <p class="text-stone-500">{{ item.text }}</p>
         </div>

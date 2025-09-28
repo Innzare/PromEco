@@ -20,8 +20,6 @@
 }
 
 .main {
-  background-color: var(--color-black-200);
-  text-align: center;
   flex: 1;
 }
 </style>

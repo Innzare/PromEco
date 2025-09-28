@@ -9,7 +9,7 @@ const isTablet = computed(() => width.value <= 768);
 <template>
   <section class="about">
     <div class="container">
-      <div class="text-left w-100 md:w-2/3">
+      <div class="w-100 md:w-2/3">
         <motion.p
           :initial="{ opacity: 0, y: 50 }"
           :whileInView="{ opacity: 1, y: 0 }"
@@ -17,8 +17,8 @@ const isTablet = computed(() => width.value <= 768);
           :inViewOptions="{ once: true, amount: 0.3 }"
           class="mb-4 text-xl md:text-3xl"
         >
-          <span class="text-red-600"> ПромЭко </span>  — это многопрофильная компания, устойчиво развивающаяся
-          <span class="text-red-600"> с 2006 года </span>
+          <span class="text-sky-700"> ПромЭко </span>  — это многопрофильная компания, устойчиво развивающаяся
+          <span class="text-sky-700"> с 2006 года </span>
           и активно наращивающая производственные ресурсы и технологическую базу.
         </motion.p>
 
@@ -37,7 +37,7 @@ const isTablet = computed(() => width.value <= 768);
           <Button variant="secondary" :size="isTablet ? 'small' : 'medium'">
             <div class="flex items-center gap-2">
               О компании
-              <Icon name="i-lucide-arrow-right" class="bg-red-700" variant="ghost" size="20px" />
+              <Icon name="i-lucide-arrow-right" class="bg-sky-700" variant="ghost" size="20px" />
             </div>
           </Button>
         </ClientOnly>
@@ -60,12 +60,13 @@ const isTablet = computed(() => width.value <= 768);
   background-attachment: fixed;
 
   @media (max-width: 768px) {
+    background-attachment: local;
     height: auto;
     padding: 80px 0;
   }
 
   @media (max-width: 425px) {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 }
 </style>

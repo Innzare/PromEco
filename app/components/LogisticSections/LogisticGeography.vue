@@ -27,7 +27,7 @@ const ITEMS = [
 
 <template>
   <div class="container">
-    <section class="bg-black-200 rounded-lg p-8 mb-10 md:mb-20">
+    <section class="bg-black-200 rounded-lg p-4 pb-8 sm:p-8 mb-10 md:mb-20">
       <h2 class="text-2xl md:text-4xl mb-4">Широкая география логистики</h2>
 
       <p class="text-stone-500 mb-10">
@@ -39,7 +39,7 @@ const ITEMS = [
         <Vue3Lottie :animationData="map" :height="isTablet ? 150 : 600" width="100%" />
       </client-only>
 
-      <p class="text-left md:text-center max-w-lg m-auto my-10">
+      <p class="md:text-center max-w-lg m-auto my-10">
         Россия, Китай, Бразилия, ОАЭ, Индия, Азербайджан, Иран, Турция, Италия, Грузия, Беларусь, Сербия, Сингапур,
         Индонезия, Катар, Кувейт, Казахстан, Узбекистан, Таджикистан, Ирак, Египет
       </p>
@@ -51,13 +51,13 @@ const ITEMS = [
         клиенту
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 mb-10">
         <div
-          class="flex flex-col gap-3 p-8 rounded-lg text-left bg-black-100 border border-black-50"
+          class="flex flex-col gap-3 p-4 sm:p-8 rounded-lg bg-black-100 border border-black-50"
           v-for="(item, index) in ITEMS"
           :key="index"
         >
-          <DigitIcon :type="item.icon" class="text-red-700" size="lg" />
+          <DigitIcon :type="item.icon" class="text-sky-700" size="lg" />
 
           <h5 class="text-xl">{{ item.title }}</h5>
 

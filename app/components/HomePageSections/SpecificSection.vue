@@ -56,7 +56,7 @@ const setBg = (bg: string, currentItemIndex: number) => {
 <template>
   <section class="specific">
     <div class="container">
-      <div class="text-left py-20">
+      <div class="py-20">
         <h3 class="text-3xl mb-4">Технологический контур компании</h3>
 
         <p class="text-stone-500">

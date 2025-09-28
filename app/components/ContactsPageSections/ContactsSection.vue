@@ -16,13 +16,13 @@ const ITEMS = [
 </script>
 
 <template>
-  <section class="py-[120px]">
+  <section class="py-[40px] md:py-[80px]">
     <div class="container">
-      <h2 class="text-2xl md:text-4xl mb-[100px] text-left">Контакты</h2>
+      <h2 class="text-3xl md:text-4xl mb-[30px] md:mb-[60px]">Контакты</h2>
 
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
         <div
-          class="flex flex-col gap-4 text-left p-8 rounded-xl bg-black-200 border border-black-100"
+          class="flex flex-col gap-4 p-8 rounded-xl bg-black-200 border border-black-100"
           v-for="(item, index) in ITEMS"
           :key="index"
         >

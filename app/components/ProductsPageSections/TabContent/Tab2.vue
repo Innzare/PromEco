@@ -33,13 +33,13 @@ const LIST = [
 
 <template>
   <div>
-    <h3 class="text-xl text-left mb-6">
+    <h3 class="text-xl mb-6">
       Добавки для смазочных материалов обеспечивают стабильную работу механизмов при высоких нагрузках и в экстремальных
       условиях.
     </h3>
 
     <ul>
-      <li v-for="item in LIST" :key="item.title" class="mb-6 text-left">
+      <li v-for="item in LIST" :key="item.title" class="mb-6">
         <h6 class="text-xl">{{ item.title }}</h6>
         <p class="text-stone-500">{{ item.text }}</p>
       </li>

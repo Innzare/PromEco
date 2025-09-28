@@ -1,7 +1,7 @@
 <template>
   <div class="lab-hero">
     <div class="container">
-      <div class="text-left w-100 md:w-2/5">
+      <div class="w-100 md:w-2/5">
         <h1 class="text-2xl md:text-5xl mb-6">Научно-исследовательская лаборатория ПромЭко</h1>
 
         <p class="text-stone-300 md:text-stone-500">

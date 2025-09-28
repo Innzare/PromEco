@@ -9,7 +9,7 @@ const SLIDES = [partnerSlide1, partnerSlide2, partnerSlide3, partnerSlide4, part
 </script>
 
 <template>
-  <div class="text-left">
+  <div class=" ">
     <div class="container">
       <h2 class="text-3xl mb-4">Наши клиенты и партнёры в отрасли</h2>
 
@@ -19,7 +19,7 @@ const SLIDES = [partnerSlide1, partnerSlide2, partnerSlide3, partnerSlide4, part
       </p>
     </div>
 
-    <HorizontalScroll class="mb-20" :slides="SLIDES" direction="right" />
+    <HorizontalScroll class="mb-10 md:mb-20" :slides="SLIDES" direction="right" />
   </div>
 </template>
 

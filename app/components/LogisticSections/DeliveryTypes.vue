@@ -20,8 +20,8 @@ const ITEMS = [
 
 <template>
   <div class="container">
-    <section class="py-20">
-      <div class="text-left mb-[60px]">
+    <section class="py-10 md:py-20">
+      <div class="mb-[60px]">
         <h2 class="text-2xl md:text-3xl mb-4">Способы отгрузки продукции</h2>
 
         <p class="text-stone-500">
@@ -29,13 +29,13 @@ const ITEMS = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
         <div
-          class="flex flex-col gap-3 p-8 rounded-lg text-left bg-black-100 border border-black-50"
+          class="flex flex-col gap-3 p-4 sm:p-8 rounded-lg bg-black-100 border border-black-50"
           v-for="(item, index) in ITEMS"
           :key="index"
         >
-          <Icon :name="item.icon" size="28px" class="text-red-500" />
+          <Icon :name="item.icon" size="28px" class="text-sky-500" />
 
           <h5 class="text-xl">{{ item.title }}</h5>
 

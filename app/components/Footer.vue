@@ -5,7 +5,7 @@
         <div class="logo-wrapper">
           <div class="logo">
             <NuxtLink to="/">
-              <img src="~/assets/img/logo.webp" alt="logo" />
+              <img src="~/assets/img/logo.webp" alt="logo" class="w-[200px]" />
             </NuxtLink>
 
             <p>Полный цикл: от лаборатории до внедрения</p>

@@ -1,7 +1,7 @@
 <template>
   <div class="logistic-hero">
     <div class="container">
-      <div class="text-left w-100 md:w-2/5">
+      <div class="w-100 md:w-2/5">
         <h1 class="text-2xl md:text-5xl mb-6">Надёжная логистика для бесперебойных поставок</h1>
 
         <p class="text-stone-300 md:text-stone-500">

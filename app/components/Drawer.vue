@@ -18,7 +18,7 @@ const props = withDefaults(
   <div class="drawer-overlay" @click="emit('close')" v-show="isOpen"></div>
   <div :class="['drawer', { open: isOpen }]">
     <NuxtLink class="logo" to="/" @click="emit('close')">
-      <img src="~/assets/img/logo.webp" alt="logo" />
+      <img src="~/assets/img/logo.webp" alt="logo" class="w-[200px]" />
     </NuxtLink>
 
     <ul class="links">
@@ -83,8 +83,7 @@ const props = withDefaults(
   z-index: 1001;
 
   .logo {
-    display: flex;
-    justify-content: center;
+    display: block;
     margin-bottom: 20px;
   }
 

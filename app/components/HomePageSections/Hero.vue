@@ -8,6 +8,7 @@ import slider3 from '~/assets/img/homePage/slider-3.webp';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import { motion } from 'motion-v';
 
 const SLIDES = [
   {
@@ -84,10 +85,11 @@ function resetProgress() {
     class="relative"
     :slides-per-view="1"
     :effect="'fade'"
+    :speed="800"
     :fade-effect="{ crossFade: true }"
     @autoplayTimeLeft="onAutoplayTimeLeft"
     :autoplay="{
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false
     }"
     :modules="[EffectFade, Autoplay]"
@@ -98,21 +100,36 @@ function resetProgress() {
     </swiper-slide>
 
     <div class="overlay">
-      <div class="overlay-text">
-        <h1 class="text-2xl md:text-5xl text-red-100 text-left mb-2 md:mb-6">{{ SLIDES[activeIndex]?.title }}</h1>
-        <p class="text-sm md:text-lg text-left text-stone-500">{{ SLIDES[activeIndex]?.subtitle }}</p>
-      </div>
+      <motion.div
+        :initial="{ opacity: 0, y: 20 }"
+        :animate="{ opacity: 1, y: 0 }"
+        :exit="{ opacity: 0, y: -20 }"
+        :transition="{ duration: 0.8 }"
+        class="overlay-text"
+        v-for="(slide, index) in SLIDES"
+        :key="index"
+        v-show="index === activeIndex"
+      >
+        <h1 class="text-2xl md:text-5xl text-red-100 mb-2 md:mb-6">
+          {{ slide.title }}
+        </h1>
+        <p class="text-sm md:text-lg md:text-stone-500">
+          {{ slide.subtitle }}
+        </p>
+      </motion.div>
 
       <ClientOnly>
         <div class="flex flex-col md:flex-row gap-2 md:gap-4 mt-12 md:mt-8">
-          <Button :size="width <= 768 ? 'small' : 'medium'">
+          <Button :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768">
             <div class="flex items-center gap-4">
               Подробнее
               <Icon name="i-lucide-arrow-big-right" size="24px" />
             </div>
           </Button>
 
-          <Button variant="secondary" :size="width <= 768 ? 'small' : 'medium'">Скачать презентацию</Button>
+          <Button variant="secondary" :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768"
+            >Скачать презентацию</Button
+          >
         </div>
       </ClientOnly>
     </div>
@@ -136,7 +153,7 @@ function resetProgress() {
           <!-- Заполнение прогресс-бара -->
           <div
             v-if="i === activeIndex"
-            class="absolute left-0 top-0 h-full bg-red-700 transition-[width] duration-100"
+            class="absolute left-0 top-0 h-full bg-sky-700 transition-[width] duration-100"
             :style="{ width: progress[activeIndex] + '%' }"
           ></div>
         </div>
@@ -170,6 +187,7 @@ function resetProgress() {
 
   @media (max-width: 768px) {
     height: 500px;
+    background-position: 85%;
   }
 }
 
@@ -184,10 +202,13 @@ function resetProgress() {
   @media (max-width: 768px) {
     right: 20px;
     left: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
   }
 
   &-text {
     height: 200px;
+    padding: 12px;
 
     @media (max-width: 768px) {
       height: 150px;

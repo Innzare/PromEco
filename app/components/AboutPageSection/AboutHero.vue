@@ -1,7 +1,7 @@
 <template>
   <div class="about-hero">
     <div class="container">
-      <h1 class="text-2xl md:text-5xl text-left w-100 md:w-1/3">Функциональные решения для сложных процессов</h1>
+      <h1 class="text-2xl md:text-5xl w-100 md:w-1/3">Функциональные решения для сложных процессов</h1>
     </div>
   </div>
 </template>
