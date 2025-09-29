@@ -3,6 +3,7 @@ interface Props {
   size?: 'small' | 'medium' | 'large';
   variant?: 'primary' | 'secondary' | 'light' | 'ghost';
   type?: 'button' | 'submit' | 'reset';
+  loading?: boolean;
   disabled?: boolean;
   active?: boolean;
   block?: boolean;
@@ -13,6 +14,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   variant: 'primary',
   type: 'button',
+  loading: false,
   disabled: false,
   active: false,
   block: false,
@@ -32,8 +34,9 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <button :type="type" :class="classes" :disabled="disabled">
-    <slot></slot>
+  <button :type="type" :class="classes" :disabled="disabled || loading">
+    <div class="loader" v-if="loading"></div>
+    <slot v-else></slot>
   </button>
 </template>
 
@@ -49,6 +52,26 @@ const classes = computed(() => {
   transition: background-color 0.15s;
   width: fit-content;
   cursor: pointer;
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #1b1b1b;
+    --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 
   &.block {
     width: 100%;

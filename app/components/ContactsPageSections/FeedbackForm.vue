@@ -30,7 +30,7 @@ const validationSchema = toTypedSchema(
   })
 );
 
-const onSubmit = async (values) => {
+const onSubmit = async (values, { resetForm }) => {
   isLoading.value = true;
 
   try {
@@ -38,6 +38,8 @@ const onSubmit = async (values) => {
       method: 'POST',
       body: values
     });
+
+    resetForm();
   } catch (error) {
     console.error('Error submitting form:', error);
   } finally {
@@ -60,7 +62,7 @@ const onSubmit = async (values) => {
         <Form
           @submit="onSubmit"
           :validation-schema="validationSchema"
-          :initialValues="{ terms: false }"
+          :initialValues="{ name: '', phone: '', email: '', message: '', terms: false }"
           class="flex flex-col gap-8 w-[100%]"
         >
           <div class="relative">
@@ -125,7 +127,7 @@ const onSubmit = async (values) => {
           <ErrorMessage name="terms" class="text-xs text-red-700" />
 
           <ClientOnly>
-            <Button :disabled="isLoading" type="submit" class="mt-0" size="small" :block="isTablet">
+            <Button :loading="isLoading" type="submit" class="mt-0" size="small" :block="isTablet">
               <div class="flex items-center gap-2">
                 <span>Отправить</span>
 
