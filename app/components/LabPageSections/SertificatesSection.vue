@@ -94,12 +94,14 @@ const LABS = [
       </div>
 
       <div class="flex justify-center">
-        <Button :block="isTablet" :size="isTablet ? 'sm' : 'md'">
-          <div class="flex gap-3 items-center">
-            <span>Посмотреть продукцию</span>
-            <Icon name="i-lucide-arrow-right" size="20px" />
-          </div>
-        </Button>
+        <NuxtLink to="/products">
+          <Button :block="isTablet" :size="isTablet ? 'sm' : 'md'">
+            <div class="flex gap-3 items-center">
+              <span>Посмотреть продукцию</span>
+              <Icon name="i-lucide-arrow-right" size="20px" />
+            </div>
+          </Button>
+        </NuxtLink>
       </div>
     </div>
   </div>

@@ -66,13 +66,15 @@ const ITEMS = [
       </div>
 
       <div class="flex justify-center">
-        <Button>
-          <div class="flex items-center gap-3">
-            <span>Посмотреть продукцию</span>
+        <NuxtLink to="/products">
+          <Button>
+            <div class="flex items-center gap-3">
+              <span>Посмотреть продукцию</span>
 
-            <Icon name="i-lucide-arrow-right" size="20" />
-          </div>
-        </Button>
+              <Icon name="i-lucide-arrow-right" size="20" />
+            </div>
+          </Button>
+        </NuxtLink>
       </div>
     </section>
   </div>

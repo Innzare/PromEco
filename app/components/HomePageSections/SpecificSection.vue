@@ -100,12 +100,14 @@ const setBg = (bg: string, currentItemIndex: number) => {
               </p>
             </div>
 
-            <Button class="list-item__button" variant="light" size="small" block>
-              <div class="flex items-center gap-2">
-                Подробнее
-                <Icon name="i-lucide-arrow-right" />
-              </div>
-            </Button>
+            <NuxtLink to="/products">
+              <Button class="list-item__button" variant="light" size="small" block>
+                <div class="flex items-center gap-2">
+                  Подробнее
+                  <Icon name="i-lucide-arrow-right" />
+                </div>
+              </Button>
+            </NuxtLink>
           </motion.div>
         </div>
       </ClientOnly>

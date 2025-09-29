@@ -34,12 +34,14 @@ const isTablet = computed(() => width.value <= 768);
         </motion.p>
 
         <ClientOnly>
-          <Button variant="secondary" :size="isTablet ? 'small' : 'medium'">
-            <div class="flex items-center gap-2">
-              О компании
-              <Icon name="i-lucide-arrow-right" class="bg-sky-700" variant="ghost" size="20px" />
-            </div>
-          </Button>
+          <NuxtLink to="/about">
+            <Button variant="secondary" :size="isTablet ? 'small' : 'medium'">
+              <div class="flex items-center gap-2">
+                О компании
+                <Icon name="i-lucide-arrow-right" class="bg-sky-700" variant="ghost" size="20px" />
+              </div>
+            </Button>
+          </NuxtLink>
         </ClientOnly>
       </div>
     </div>

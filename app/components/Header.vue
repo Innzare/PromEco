@@ -50,9 +50,9 @@ const onNavMenuBtnClick = () => {
   padding-block: 1rem;
 }
 
-.header-wrapper {
-  background-color: var(--color-black-200);
-}
+// .header-wrapper {
+//   background-color: var(--color-black-200);
+// }
 
 .links {
   display: flex;

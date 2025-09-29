@@ -2,15 +2,32 @@
 const ITEMS = [
   {
     title: 'Электронная почта',
-    text: 'info@prom-eko.ru'
+    text: 'info@prom-eko.ru',
+    path: 'mailto:info@prom-eko.ru',
+    type: 'email'
   },
   {
     title: 'Телефон',
-    text: '+7 495 795-04-37 <br/> +7 495 795-04-38'
+    // text: '+7 495 795-04-37 <br/> +7 495 795-04-38',
+    // path: 'tel:+74957950437', type: 'tel'
+    // path: 'tel:+74957950437', type: 'tel',
+
+    list: [
+      {
+        text: '+7 495 795-04-37',
+        path: 'tel:+74957950437'
+      },
+      {
+        text: '+7 495 795-04-38',
+        path: 'tel:+74957950438'
+      }
+    ]
   },
   {
     title: 'Адрес',
-    text: 'Москва, Летниковская, 11/10, стр.. 12, Помещение IV'
+    text: 'Москва, Летниковская, 11/10, стр... 12, Помещение IV',
+    path: 'https://yandex.ru/maps/213/moscow/house/letnikovskaya_ulitsa_11_10s26/Z04YcANmT0UBQFtvfXtzcnVnZg==/?ll=37.653121%2C55.723495&z=15.25',
+    type: 'location'
   }
 ];
 </script>
@@ -28,7 +45,21 @@ const ITEMS = [
         >
           <h6 class="text-xl text-stone-500">{{ item.title }}</h6>
 
-          <p v-html="item.text"></p>
+          <!-- <p v-html="item.text"></p> -->
+          <template v-if="item.list">
+            <NuxtLink :to="item.path" v-for="item in item.list" class="hover:text-sky-700">
+              {{ item.text }}
+            </NuxtLink>
+          </template>
+
+          <NuxtLink
+            :to="item.path"
+            v-else
+            :target="item.type === 'location' ? '_blank' : '_self'"
+            class="hover:text-sky-700"
+          >
+            {{ item.text }}
+          </NuxtLink>
         </div>
       </div>
     </div>

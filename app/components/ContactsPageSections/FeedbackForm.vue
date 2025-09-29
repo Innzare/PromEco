@@ -24,7 +24,7 @@ const validationSchema = toTypedSchema(
     phone: zod.string().min(18, { message: 'Введите корректный номер телефона' }).max(20, { message: 'Too long' }),
     email: zod.string().min(1, { message: 'Поле обязательно для заполнения' }).email({ message: 'Некорректный Email' }),
     terms: zod.boolean().refine((val) => val === true, {
-      message: 'Вы должны согласиться с условиями'
+      message: 'Для отправки формы необходимо согласие с условиями политики конфиденциальности'
     }),
     message: zod.string().max(500, { message: 'Too long' }).optional()
   })

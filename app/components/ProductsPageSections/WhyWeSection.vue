@@ -32,7 +32,7 @@ const LIST = [
         <div
           v-for="(item, index) in LIST"
           :key="index"
-          class="flex flex-col gap-6 items-center bg-black-100 p-4 sm:p-8 rounded-lg hover:shadow-lg transition-shadow border border-gray-700"
+          class="flex flex-col gap-4 items-center text-center bg-black-100 p-4 sm:p-6 rounded-lg hover:shadow-lg transition-shadow border border-gray-700"
         >
           <Icon :name="item.icon" size="40px" class="text-sky-700" />
           <h3 class="text-xl mb-2">{{ item.title }}</h3>

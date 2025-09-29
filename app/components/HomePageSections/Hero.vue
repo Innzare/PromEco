@@ -120,16 +120,18 @@ function resetProgress() {
 
       <ClientOnly>
         <div class="flex flex-col md:flex-row gap-2 md:gap-4 mt-12 md:mt-8">
-          <Button :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768">
-            <div class="flex items-center gap-4">
-              Подробнее
-              <Icon name="i-lucide-arrow-big-right" size="24px" />
-            </div>
-          </Button>
+          <NuxtLink to="/about">
+            <Button :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768">
+              <div class="flex items-center gap-4">
+                Подробнее
+                <Icon name="i-lucide-arrow-big-right" size="24px" />
+              </div>
+            </Button>
+          </NuxtLink>
 
-          <Button variant="secondary" :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768"
-            >Скачать презентацию</Button
-          >
+          <Button variant="secondary" :size="width <= 768 ? 'small' : 'medium'" :block="width <= 768">
+            Скачать презентацию
+          </Button>
         </div>
       </ClientOnly>
     </div>

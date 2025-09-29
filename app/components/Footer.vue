@@ -1,3 +1,46 @@
+<script lang="ts" setup>
+const FOOTER_NAV = [
+  {
+    title: 'Информация',
+    list: [
+      { icon: null, text: 'О компании', path: '/about', type: null },
+      { icon: null, text: 'Продукция', path: '/products', type: null },
+      { icon: null, text: 'Лаборатория', path: '/lab', type: null },
+      { icon: null, text: 'Логистика', path: '/logistic', type: null },
+      { icon: null, text: 'Контакты', path: '/contacts', type: null }
+    ]
+  },
+
+  {
+    title: 'Продукция',
+    list: [
+      { icon: null, text: 'Присадки для топлив', path: '/products, type: null' },
+      { icon: null, text: 'Присадки для смазочных материалов', path: '/products', type: null },
+      { icon: null, text: 'Реагенты', path: '/products', type: null },
+      { icon: null, text: 'Полимерные добавки', path: '/products', type: null },
+      { icon: null, text: 'Крупнотоннажная химия', path: '/products', type: null }
+    ]
+  },
+
+  {
+    title: 'Контакты',
+    list: [
+      { icon: 'i-lucide-at-sign', text: 'info@prom-eko.ru', path: 'mailto:info@prom-eko.ru', type: 'email' },
+      {
+        icon: 'i-lucide-map-pin',
+        text: 'Москва, Летниковская, 11/10, стр. 12, Помещение IV',
+        path: 'https://yandex.ru/maps/213/moscow/house/letnikovskaya_ulitsa_11_10s26/Z04YcANmT0UBQFtvfXtzcnVnZg==/?ll=37.653121%2C55.723495&z=15.25',
+        type: 'location'
+      },
+      { icon: 'i-lucide-phone', text: '+7 (495) 795-04-37', path: 'tel:+74957950437', type: 'tel' },
+      { icon: 'i-lucide-phone', text: '+7 (495) 795-04-38', path: 'tel:+74957950437', type: 'tel' }
+    ]
+  }
+];
+
+const currentYear = new Date().getFullYear();
+</script>
+
 <template>
   <footer class="footer">
     <div class="container">
@@ -19,9 +62,16 @@
             <p class="footer-nav__title">{{ item.title }}</p>
 
             <ul class="footer-nav__list">
-              <NuxtLink :to="listItem.path" v-for="listItem in item.list" :key="listItem.text" class="footer-nav__link">
+              <NuxtLink
+                :to="listItem.path"
+                v-for="(listItem, index) in item.list"
+                :key="index"
+                class="footer-nav__link"
+                :target="listItem?.type === 'location' ? '_blank' : '_self'"
+              >
                 <Icon class="footer-nav__link-icon" :name="listItem.icon" v-if="listItem?.icon" />
-                <li v-html="listItem.text" />
+
+                <li>{{ listItem.text }}</li>
               </NuxtLink>
             </ul>
 
@@ -32,45 +82,10 @@
         </nav>
       </div>
 
-      <p class="copyright">ПромЭко © 2006–2025</p>
+      <p class="copyright">ПромЭко © 2006–{{ currentYear }}</p>
     </div>
   </footer>
 </template>
-
-<script lang="ts" setup>
-const FOOTER_NAV = [
-  {
-    title: 'Информация',
-    list: [
-      { icon: null, text: 'О компании', path: '/about' },
-      { icon: null, text: 'Продукция', path: '/products' },
-      { icon: null, text: 'Лаборатория', path: '/lab' },
-      { icon: null, text: 'Логистика', path: '/logistic' },
-      { icon: null, text: 'Контакты', path: '/contacts' }
-    ]
-  },
-
-  {
-    title: 'Продукция',
-    list: [
-      { icon: null, text: 'Присадки для топлив', path: '/' },
-      { icon: null, text: 'Присадки для смазочных материалов', path: '/' },
-      { icon: null, text: 'Реагенты', path: '/' },
-      { icon: null, text: 'Полимерные добавки', path: '/' },
-      { icon: null, text: 'Крупнотоннажная химия', path: '/' }
-    ]
-  },
-
-  {
-    title: 'Контакты',
-    list: [
-      { icon: 'i-lucide-at-sign', text: 'info@prom-eko.ru', path: '/' },
-      { icon: 'i-lucide-map-pin', text: 'Москва, Летниковская, 11/10, стр. 12, Помещение IV', path: '/' },
-      { icon: 'i-lucide-phone', text: '+7 495 795-04-37 <br/> +7 495 795-04-38', path: '/' }
-    ]
-  }
-];
-</script>
 
 <style scoped lang="scss">
 .footer {

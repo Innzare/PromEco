@@ -1,11 +1,6 @@
-<script setup>
-// import { Vue3Lottie } from 'vue3-lottie';
-// import light from '~/assets/img/aboutPage/light.json';
-</script>
-
 <template>
   <div
-    class="relative flex items-center justify-start height-auto md:h-96 py-8 bg-[url(~/assets/img/aboutPage/light.webp)] bg-no-repeat bg-cover"
+    class="relative flex items-center justify-start h-[350px] md:h-[700px] py-8 bg-[url(~/assets/img/aboutPage/light.webp)] bg-no-repeat bg-cover bg-right"
   >
     <div class="container">
       <h5 class="text-xl md:text-3xl mb-10 md:mb-20 w-100 sm:w-2/3">
@@ -21,10 +16,6 @@
         </div>
       </Button>
     </div>
-
-    <!-- <client-only> -->
-    <!-- <Vue3Lottie class="light-animation" :animationData="light" height="100%" width="100%" /> -->
-    <!-- </client-only> -->
   </div>
 </template>
 

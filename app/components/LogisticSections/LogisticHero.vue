@@ -21,7 +21,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
   color: white;
 
   @media (max-width: 1024px) {
