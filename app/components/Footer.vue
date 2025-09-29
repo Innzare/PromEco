@@ -14,7 +14,7 @@ const FOOTER_NAV = [
   {
     title: 'Продукция',
     list: [
-      { icon: null, text: 'Присадки для топлив', path: '/products, type: null' },
+      { icon: null, text: 'Присадки для топлив', path: '/products', type: null },
       { icon: null, text: 'Присадки для смазочных материалов', path: '/products', type: null },
       { icon: null, text: 'Реагенты', path: '/products', type: null },
       { icon: null, text: 'Полимерные добавки', path: '/products', type: null },
