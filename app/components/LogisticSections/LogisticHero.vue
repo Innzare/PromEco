@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
 .logistic-hero {
-  background: url('~/assets/img/labPage/hero.webp') no-repeat center;
+  background: url('~/assets/img/logisticPage/hero.webp') no-repeat center;
   background-size: cover;
   height: 660px;
   display: flex;
@@ -28,7 +28,7 @@
   }
 
   @media (max-width: 768px) {
-    background: url('~/assets/img/labPage/hero.webp') no-repeat 85%;
+    background: url('~/assets/img/logisticPage/hero.webp') no-repeat 85%;
     background-size: cover;
     align-items: flex-start;
     padding: 20px;
